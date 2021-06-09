@@ -28,6 +28,21 @@
   <script>
     let quote = 'I do not like green eggs and ham. I do not like them, Sam-I-Am.';
     let substring = 'green eggs and ham';
+    
+    let quoteLength = quote.length;
+
+    let index =  quote.search(substring);
+
+    console.log(index);
+
+
+    
+
+    let revisedQuote = quote.slice(0,index) + substring;
+
+    console.log (revisedQuote);
+
+
 
     // Add your code here
 
