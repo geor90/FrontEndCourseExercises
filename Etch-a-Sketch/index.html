@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1> ETCH-A-SKETCH</h1>
+    <h2> edition </h2>
+    <button><b>Shake!</b></button>
+    <div class="container"></div>
+
+    <script>
+        let grid = document.querySelector(".container");
+
+        function createGrid() {
+            for (let i = 0; i < 256; i++) {
+                let div = document.createElement("div");
+                div.classList.add("square");
+                grid.appendChild(div);
+            }
+        }
+
+        function makeNewGrid() {
+            let userInput = Number(prompt("Type a value for grid size!"));
+            grid.innerHTML = "";
+            grid.style.setProperty(
+                "grid-template-columns",
+                `repeat(${userInput}, 2fr)`
+            );
+            grid.style.setProperty(
+                "grid-template-rows",
+                `repeat(${userInput}, 2fr)`
+            );
+            for (let i = 0; i < userInput * userInput; i++) {
+                const div = document.createElement("div");
+                div.classList.add("square");
+                grid.appendChild(div);
+            }
+            console.log(userInput);
+        };
+
+        document.querySelector("div").addEventListener("mouseover", function (event) {
+            event.target.classList.replace("square", "color");
+        });
+
+        let button = document.querySelector("button")
+
+        button.addEventListener("click", makeNewGrid)
+
+        createGrid();
+    </script>
+</body>
+
+</html>
