@@ -1,0 +1,58 @@
+*{box-sizing: border-box}
+
+
+/* Add padding to containers */
+.container {
+    padding: 50px;
+    padding-bottom: 100px;
+    background-color: #F06728;
+    text-align: center;
+    width: 50%;
+    box-align:center;
+    margin:0 auto;}
+    
+
+h1{color: white;
+text-align: left;}
+
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    
+    padding: 8px;
+    
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+    
+  }
+  .container label {
+    float:left;
+    width:30%;
+    display: inline-block;
+    margin-right:5px; /* optional */
+    margin-top: 5px;
+    margin-left: 75px;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align:right;
+  }
+  .container input {
+    float:left;
+    width:35%; 
+    margin-left: 15px;
+    margin-bottom: 20px ;
+    
+      }
+  
+    button {
+    float: right;
+    width:25%;
+    padding: 8px 20px;
+    display: inline-block;
+    margin:auto;
+    margin-right: 22px;
+    color: orangered;
+    font-family: 'Open Sans', sans-serif;
+    text-align:center;}
