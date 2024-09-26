@@ -1,4 +1,4 @@
-const caesar = function() {
+const caesar = function(str,number) {
 
 }
 
